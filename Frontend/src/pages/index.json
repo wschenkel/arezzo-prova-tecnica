@@ -1,0 +1,18 @@
+{
+	"slider": {
+		"items":[
+			{
+				"img": "https://via.placeholder.com/420x300/3071a0/FFFFFF",
+				"alt": "lorem"
+			},
+			{
+				"img": "https://via.placeholder.com/420x300/3071a0/FFFFFF",
+				"alt": "lorem"
+			},
+			{
+				"img": "https://via.placeholder.com/420x300/3071a0/FFFFFF",
+				"alt": "lorem"
+			}
+		]
+	}
+}

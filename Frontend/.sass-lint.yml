@@ -1,0 +1,82 @@
+---
+options:
+  merge-default-rules: true
+  formatter: stylish
+  max-warnings: 50
+files:
+  include: Frontend/**/**/**/**/**/*.s+(a|c)ss
+  ignore:
+  - node_modules/**/*.*
+rules:
+  clean-import-paths: false
+  no-ids: true
+  quotes:
+  - true
+  - style: single
+  border-zero:
+  - true
+  - convention: none
+  brace-style:
+  - true
+  - style: 1tbs
+  class-name-format:
+  - 2
+  - allow-leading-underscore: false
+    convention: hyphenatedlowercase
+  declarations-before-nesting: true
+  empty-args:
+  - true
+  - allow-leading-underscore: false
+    convention: hyphenatedlowercase
+  empty-line-between-blocks:
+  - true
+  - include: true
+    allow-single-line-rulesets: false
+  extends-before-declarations: true
+  extends-before-mixins: true
+  force-element-nesting: true
+  function-name-format:
+  - true
+  - allow-leading-underscore: false
+    convention: hyphenatedlowercase
+    convention-explanation: Os nome de funções devem conter apenas hífens e letras
+      minúsculas.
+  hex-notation:
+  - true
+  - style: lowercase
+  indentation:
+  - true
+  - size: tab
+  leading-zero:
+  - true
+  - include: false
+  no-important: true
+  no-mergeable-selectors: true
+  no-misspelled-properties: true
+  no-transition-all: true
+  no-universal-selectors: true
+  no-url-domains: true
+  no-vendor-prefixes: true
+  one-declaration-per-line: true
+  shorthand-values: true
+  single-line-per-selector: true
+  space-before-brace: true
+  space-between-parens: true
+  space-after-colon: true
+  space-after-comma: true
+  space-around-operator: true
+  url-quotes: true
+  pseudo-element: true
+  variable-name-format:
+  - true
+  - allow-leading-underscore: false
+    convention: hyphenatedlowercase
+    convention-explanation: Os nomes de variáveis devem conter apenas hífens e letras
+      minúsculas.
+  property-sort-order:
+  - false
+  - order: default
+  nesting-depth:
+  - true
+  - max-depth: 4
+

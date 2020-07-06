@@ -1,0 +1,62 @@
+// File where the bootstrap grid variables can be overwrited
+$grid-columns: 12 !default;
+$grid-gutter-width: 30px !default;
+
+$grid-breakpoints: (
+	xs: 0,
+	sm: 480px,
+	md: 768px,
+	lg: 1024px
+) !default;
+
+$container-max-widths: (
+	sm: 420px,
+	md: 720px,
+	lg: 960px
+) !default;
+
+
+// BOOTSTRAP GRID, KEEP THIS, DON'T CHANGE VARIABLES FOR WIDTH.
+@mixin xs {
+	@media (min-width: 0) {
+		@content;
+	}
+}
+
+@mixin sm {
+	@media (min-width: map-get($grid-breakpoints, 'sm')) {
+		@content;
+	}
+}
+
+@mixin md {
+	@media (min-width: map-get($grid-breakpoints, 'md')) {
+		@content;
+	}
+}
+
+@mixin lg {
+	@media (min-width:  map-get($grid-breakpoints, 'lg')) {
+		@content;
+	}
+}
+
+
+// FRAMEWORK MIXINS, DECLARE YOUR BREAKPOINTS HERE AS YOU NEED.
+@mixin laptop {
+	@media (min-width: 1280px) {
+		@content;
+	}
+}
+
+@mixin laptop-large {
+	@media (min-width: 1366px) {
+		@content;
+	}
+}
+
+@mixin large {
+	@media (min-width: 1920px) {
+		@content;
+	}
+}
