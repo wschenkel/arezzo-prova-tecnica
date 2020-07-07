@@ -1,24 +1,22 @@
-// import Header from '../src/materials/components/header/header.js';
-
+import Header from '../src/materials/components/header/header.js';
 export default class App {
 	constructor() {
-		// new Header();
-		console.log('initialize app');
+		new Header();
 
-		// let xhr = new XMLHttpRequest();
+		let xhr = new XMLHttpRequest();
+		xhr.open('GET', 'http://localhost:3004/api/products.json', false);
 
-		// xhr.open('GET', '/article/xmlhttprequest/hello.txt', false);
-
-		// try {
-		// 	xhr.send();
-		// 	if (xhr.status != 200) {
-		// 		alert(`Error ${xhr.status}: ${xhr.statusText}`);
-		// 	} else {
-		// 		alert(xhr.response);
-		// 	}
-		// } catch (err) { // instead of onerror
-		// 	alert("Request failed");
-		// }
+		try {
+			xhr.send();
+			if (xhr.status != 200) {
+				console.log(`Error ${xhr.status}: ${xhr.statusText}`);
+			} else {
+				// console.log(xhr.response);
+			}
+		} catch (err) {
+			console.log(err);
+			alert('Falha ao carregar os dados.');
+		}
 	}
 }
 

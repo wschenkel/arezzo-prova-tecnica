@@ -1,0 +1,86 @@
+@import 'base/colors';
+
+[data-component='menu'] {
+    background: $white;
+    padding: 20px;
+    position: fixed;
+    width: 280px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    display: block;
+    transform: translateX(-110%);
+    transition: all .35s ease-in-out;
+
+    ul { 
+        padding: 0;
+        width: 100%;
+    }
+
+    li {
+        list-style: none;
+        height: 47px;
+        border-bottom: 1px solid $grey;
+
+        &:last-child {
+            border-bottom: 0;
+        }
+
+        &.my-account {
+            margin-top: 22px;
+            
+            a {
+                font-weight: normal;
+            }
+        }
+    }
+
+    a {
+        text-decoration: none;
+        display: flex; 
+        color: $black;
+        padding: 0 10px;
+        align-items: center;
+        height: 100%;
+        transition: all .2s ease-in-out;
+        font-weight: bold;
+
+        &.active,
+        &:hover {
+            color: $green;
+        }
+    }
+
+    .btn-close-collapse {
+        width: 15px;
+        height: 19px;
+        position: absolute;
+        right: -28px;
+        top: 9px;
+        text-indent: -500px;
+        overflow: hidden;
+
+        &:focus,
+        &:active {
+            outline: 0;
+        }
+
+        span {
+            background: $green;
+            height: 5px;
+            width: 100%;
+            display: block;
+            transition: all .2s ease-in-out;
+            position: absolute;
+            
+            &:first-child {
+                transform: rotate(45deg);
+            }
+
+            &:last-child {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+}
