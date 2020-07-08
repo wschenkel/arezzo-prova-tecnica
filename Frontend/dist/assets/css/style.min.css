@@ -110,10 +110,30 @@
       width: 100%;
       height: 100%;
       background: #fff;
-      border: 1px solid #EEE;
+      border: 2px solid #EEE;
       padding: 0 13px;
       text-transform: uppercase;
       font-size: 12px; }
+  [data-component='main'] .box-products ul {
+    padding: 0; }
+  [data-component='main'] .box-products li {
+    list-style: none;
+    max-width: 185px;
+    width: 100%; }
+  [data-component='main'] .box-products .box-img {
+    max-width: 185px;
+    width: 100%;
+    height: auto; }
+  [data-component='main'] .box-products img {
+    width: 100%; }
+  [data-component='main'] .box-products a {
+    display: block;
+    color: #333;
+    text-decoration: none; }
+  [data-component='main'] .box-products strong {
+    display: block;
+    margin-top: 15px;
+    text-align: center; }
 
 [data-component='menu'] {
   background: #fff;
