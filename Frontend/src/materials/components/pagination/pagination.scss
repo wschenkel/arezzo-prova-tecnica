@@ -1,0 +1,58 @@
+@import 'base/colors';
+@import 'utils/medias';
+
+[data-component='pagination'] {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;  
+    padding-top: 50px;
+    margin-bottom: 60px;
+
+    button {
+        width: 35px;
+        height: 35px;
+        
+        &.blocked {
+            background: $grey-blocked;
+        }
+    }
+
+    .btn-next-page {
+
+    }
+
+    .btn-previous-page {
+        img {
+            transform: rotate(-180deg);
+        }
+    }
+
+    ul {
+        padding: 0;
+        margin: 0 5px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    li {
+        list-style: none;
+        width: 35px;
+        height: 35px;
+    }
+
+    a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+        text-align: center;
+        line-height: 35px;
+        color: $grey-darker;
+
+        &.active {
+            background: $green;
+            color: $white;
+        }
+    }
+}

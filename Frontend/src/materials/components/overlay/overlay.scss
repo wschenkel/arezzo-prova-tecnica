@@ -1,6 +1,6 @@
 @import 'base/colors';
 
-.overlay {
+[data-component='overlay'] {
     position: fixed;
     background: $black-lighter;
     width: 100%;
