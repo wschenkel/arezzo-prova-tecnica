@@ -1,6 +1,10 @@
 @import 'base/colors';
+@import 'utils/medias';
 
 [data-component='header'] {
+    @include desktop() {
+        height: 68px;
+    }
     height: 51px;
     background: $white;
     border-bottom: 1px solid $grey-lighter;
@@ -13,6 +17,9 @@
     }
 
     .btn-collapse {
+        @include desktop() {
+            display: none;
+        }
         width: 20px;
         height: 20px;
         display: flex;
@@ -32,9 +39,11 @@
 
     .logo {
         width: 105px;
-        height: 39px;
+        height: auto;
         display: block;
         margin: 0 auto;
+        position: relative;
+        z-index: 2;
 
         a {
             display: block;
@@ -48,7 +57,7 @@
     }
 
     &.show {
-        [data-component='menu'] {
+        [data-component='navigation'].nav-left {
             transform: translateX(0);
         }
     }

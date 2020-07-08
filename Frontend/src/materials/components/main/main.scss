@@ -1,19 +1,30 @@
 @import 'base/colors';
+@import 'utils/medias';
 
 [data-component='main'] {
+    @include desktop() {
+        padding-top: 25px;
+    }
     padding-top: 20px;
 
     .container {
+        @include desktop() {
+            padding: 0 30px;
+        }
         padding: 0 10px;
     }
 
     .box-head {
+        @include desktop() {
+            margin-bottom: 60px;
+        }
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        margin-bottom: 20px;
 
-        strong {
+        strong { 
             font-weight: bold;
             color: $black;
             display: block;
@@ -37,20 +48,51 @@
     }
 
     .box-products {
+        @include desktop() {
+            padding: 0 15px;
+        }
+        @include large() {
+            max-width: 1803px;
+            padding: 0;
+            margin: 0 auto;
+        }
         ul {
             padding: 0;
+            flex-wrap: wrap;
+            flex-direction: row;
+            display: flex;
+            flex: 0 1 auto;
+            justify-content: space-between;
         }
 
         li {
+            @include tablet() {
+                flex: 0 0 33.33%;
+            }
+            @include desktop() {
+                margin-bottom: 78px;
+                flex: 0 0 23%;
+                max-width: 403px;
+            }
+            @mixin laptop-large {
+                flex: 0 0 auto;
+            }
             list-style: none;
-            max-width: 185px;
-            width: 100%;
+            flex-grow: 1;
+            flex-basis: 0;
+            max-width: 100%;
+            flex: 0 0 48%;
+            margin-bottom: 25px;
         }
 
         .box-img {
+            @include desktop() {
+                max-width: 403px;
+            }
             max-width: 185px;
             width: 100%;
             height: auto;
+            margin: 0 auto;
         }
 
         img {
@@ -67,6 +109,14 @@
             display: block;
             margin-top: 15px;
             text-align: center;
+
+            &.tt-product-name {
+                @include desktop() {
+                    display: block;
+                    text-transform: uppercase;
+                }
+                display: none;
+            }
         }
     }
 }

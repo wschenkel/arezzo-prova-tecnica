@@ -43,6 +43,24 @@ $container-max-widths: (
 
 
 // FRAMEWORK MIXINS, DECLARE YOUR BREAKPOINTS HERE AS YOU NEED.
+@mixin mobile {
+	@media (min-width: 420px) {
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media (min-width: 768px) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media (min-width: 992px) {
+		@content;
+	}
+}
+
 @mixin laptop {
 	@media (min-width: 1280px) {
 		@content;

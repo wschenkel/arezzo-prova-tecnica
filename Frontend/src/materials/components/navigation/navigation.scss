@@ -1,33 +1,86 @@
 @import 'base/colors';
+@import 'utils/medias';
 
-[data-component='menu'] {
+[data-component='navigation'] {
+    @include desktop() {
+        position: absolute;
+        top: 0;
+        left: auto;
+        transform: none;
+        padding: 0;
+        width: auto;
+    }
     background: $white;
     padding: 20px;
     position: fixed;
     width: 280px;
     height: 100%;
     left: 0;
-    top: 0;
+    top: 0; 
     z-index: 2;
     display: block;
     transform: translateX(-110%);
     transition: all .35s ease-in-out;
 
+    &.nav-right {
+        @include desktop() {
+            display: block;
+            right: 20px;
+        }
+        display: none;
+
+        li {
+            @include desktop() {
+                margin-right: 40px;;
+            }
+
+            &:last-child {
+                @include desktop() {
+                    margin-right: 40px;;
+                }
+            }
+        }
+    }
+
+    .container {
+        @include desktop {
+            padding: 0 60px;
+        }
+    }
+
     ul { 
+        @include desktop() {
+            display: flex;
+            flex-direction: row;
+            height: 100%;
+        }
         padding: 0;
         width: 100%;
     }
 
     li {
+        @include desktop() {
+            height: 100%;
+            border-bottom: 0;
+            height: 100%;
+            margin-right: 50px;
+        }
         list-style: none;
         height: 47px;
         border-bottom: 1px solid $grey;
 
         &:last-child {
+            @include desktop() {
+                margin-right: 50px;
+            }
             border-bottom: 0;
         }
 
         &.my-account {
+            @include desktop() {
+                margin-top: 0;
+                display: none;
+            }
             margin-top: 22px;
             
             a {
@@ -37,13 +90,16 @@
     }
 
     a {
+        @include desktop() {
+            padding: 0;
+        }
         text-decoration: none;
         display: flex; 
         color: $black;
         padding: 0 10px;
         align-items: center;
         height: 100%;
-        transition: all .2s ease-in-out;
+        transition: color .2s ease-in-out;
         font-weight: bold;
 
         &.active,
@@ -53,6 +109,9 @@
     }
 
     .btn-close-collapse {
+        @include desktop() {
+            display: none;
+        }
         width: 15px;
         height: 19px;
         position: absolute;
