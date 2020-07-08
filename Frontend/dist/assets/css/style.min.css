@@ -343,9 +343,17 @@
           justify-content: center;
   padding-top: 50px;
   margin-bottom: 60px; }
+  @media (min-width: 992px) {
+    [data-component='pagination'] {
+      margin-bottom: 29px;
+      padding-top: 45px; } }
   [data-component='pagination'] button {
     width: 35px;
     height: 35px; }
+    @media (min-width: 992px) {
+      [data-component='pagination'] button {
+        width: 40px;
+        height: 40px; } }
     [data-component='pagination'] button.blocked {
       background: #E2E2E2; }
   [data-component='pagination'] .btn-previous-page img {
@@ -360,11 +368,25 @@
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
-            flex-direction: row; }
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    @media (min-width: 992px) {
+      [data-component='pagination'] ul {
+        margin: 0 20px; } }
   [data-component='pagination'] li {
     list-style: none;
     width: 35px;
     height: 35px; }
+    @media (min-width: 992px) {
+      [data-component='pagination'] li {
+        margin-right: 20px;
+        width: 40px;
+        height: 40px; } }
+    @media (min-width: 992px) {
+      [data-component='pagination'] li:last-child {
+        margin-right: 0; } }
   [data-component='pagination'] a {
     display: block;
     width: 100%;
@@ -373,6 +395,9 @@
     text-align: center;
     line-height: 35px;
     color: #333; }
+    @media (min-width: 992px) {
+      [data-component='pagination'] a {
+        line-height: 40px; } }
     [data-component='pagination'] a.active {
       background: #92AA88;
       color: #fff; }

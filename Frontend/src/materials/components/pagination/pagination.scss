@@ -2,6 +2,10 @@
 @import 'utils/medias';
 
 [data-component='pagination'] {
+    @include desktop() {
+        margin-bottom: 29px;
+        padding-top: 45px;
+    }
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -10,6 +14,10 @@
     margin-bottom: 60px;
 
     button {
+        @include desktop() {
+            width: 40px;
+            height: 40px;
+        }
         width: 35px;
         height: 35px;
         
@@ -29,19 +37,37 @@
     }
 
     ul {
+        @include desktop() {
+            margin: 0 20px;
+        }
         padding: 0;
         margin: 0 5px;
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
     }
 
     li {
+        @include desktop() {
+            margin-right: 20px;
+            width: 40px;
+            height: 40px;
+        }
         list-style: none;
         width: 35px;
         height: 35px;
+
+        &:last-child {
+            @include desktop() {
+                margin-right: 0;
+            }
+        }
     }
 
     a {
+        @include desktop() {
+           line-height: 40px;
+        }
         display: block;
         width: 100%;
         height: 100%;
