@@ -3,105 +3,16 @@
         <div class="box-head">
             <strong>Sapatos</strong>
             <form>
-                <select name="selOrderBy">
-                    <option value="1">Maior Preço</option>
-                    <option value="2">Menor Preço</option>
-                    <option value="3">Nome A-Z</option>
-                    <option value="4">Nome Z-A</option>
+                <select class="selOrderProducts" name="selOrderBy">
+                    <option value="highest">Maior Preço</option>
+                    <option value="lowest">Menor Preço</option>
+                    <option value="orderly">Nome A-Z</option>
+                    <option value="inordinate">Nome Z-A</option>
                 </select>
             </form>
         </div>
         <section class="box-products">
-            <ul>
-                <li>
-                    <a class="box-img" href="javascript:void(0);" title="Product">
-                        <img src="https://via.placeholder.com/405" alt="Product"/>
-                    </a>
-                    <strong class="tt-product-name">
-                        <a href="javascript:void(0);" title="Product">LPARGATA HELOISA TECIDO CAMEL</a>
-                    </strong>
-                    <strong class="tt-product-price">
-                        <a href="javascript:void(0);" title="Product">R$ 260.12</a>
-                    </strong>
-                </li>
-                <li>
-                    <a class="box-img" href="javascript:void(0);" title="Product">
-                        <img src="https://via.placeholder.com/405" alt="Product"/>
-                    </a>
-                    <strong class="tt-product-name">
-                        <a href="javascript:void(0);" title="Product">LPARGATA HELOISA TECIDO CAMEL</a>
-                    </strong>
-                    <strong class="tt-product-price">
-                        <a href="javascript:void(0);" title="Product">R$ 260.12</a>
-                    </strong>
-                </li>
-                <li>
-                    <a class="box-img" href="javascript:void(0);" title="Product">
-                        <img src="https://via.placeholder.com/405" alt="Product"/>
-                    </a>
-                    <strong class="tt-product-name">
-                        <a href="javascript:void(0);" title="Product">LPARGATA HELOISA TECIDO CAMEL</a>
-                    </strong>
-                    <strong class="tt-product-price">
-                        <a href="javascript:void(0);" title="Product">R$ 260.12</a>
-                    </strong>
-                </li>
-                <li>
-                    <a class="box-img" href="javascript:void(0);" title="Product">
-                        <img src="https://via.placeholder.com/405" alt="Product"/>
-                    </a>
-                    <strong class="tt-product-name">
-                        <a href="javascript:void(0);" title="Product">LPARGATA HELOISA TECIDO CAMEL</a>
-                    </strong>
-                    <strong class="tt-product-price">
-                        <a href="javascript:void(0);" title="Product">R$ 260.12</a>
-                    </strong>
-                </li>
-                <li>
-                    <a class="box-img" href="javascript:void(0);" title="Product">
-                        <img src="https://via.placeholder.com/405" alt="Product"/>
-                    </a>
-                    <strong class="tt-product-name">
-                        <a href="javascript:void(0);" title="Product">LPARGATA HELOISA TECIDO CAMEL</a>
-                    </strong>
-                    <strong class="tt-product-price">
-                        <a href="javascript:void(0);" title="Product">R$ 260.12</a>
-                    </strong>
-                </li>
-                <li>
-                    <a class="box-img" href="javascript:void(0);" title="Product">
-                        <img src="https://via.placeholder.com/405" alt="Product"/>
-                    </a>
-                    <strong class="tt-product-name">
-                        <a href="javascript:void(0);" title="Product">LPARGATA HELOISA TECIDO CAMEL</a>
-                    </strong>
-                    <strong class="tt-product-price">
-                        <a href="javascript:void(0);" title="Product">R$ 260.12</a>
-                    </strong>
-                </li>
-                <li>
-                    <a class="box-img" href="javascript:void(0);" title="Product">
-                        <img src="https://via.placeholder.com/405" alt="Product"/>
-                    </a>
-                    <strong class="tt-product-name">
-                        <a href="javascript:void(0);" title="Product">LPARGATA HELOISA TECIDO CAMEL</a>
-                    </strong>
-                    <strong class="tt-product-price">
-                        <a href="javascript:void(0);" title="Product">R$ 260.12</a>
-                    </strong>
-                </li>
-                <li>
-                    <a class="box-img" href="javascript:void(0);" title="Product">
-                        <img src="https://via.placeholder.com/405" alt="Product"/>
-                    </a>
-                    <strong class="tt-product-name">
-                        <a href="javascript:void(0);" title="Product">LPARGATA HELOISA TECIDO CAMEL</a>
-                    </strong>
-                    <strong class="tt-product-price">
-                        <a href="javascript:void(0);" title="Product">R$ 260.12</a>
-                    </strong>
-                </li>
-            </ul>
+            <ul class="list-products"></ul>
         </section>
         
         {{> pagination.pagination }}

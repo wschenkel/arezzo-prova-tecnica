@@ -15,7 +15,7 @@
         height: 100%;
         align-items: center;
     }
-
+ 
     .btn-collapse {
         @include desktop() {
             display: none;
@@ -38,12 +38,14 @@
     }
 
     .logo {
+        @include desktop() {
+            z-index: 2;
+        }
         width: 105px;
         height: auto;
         display: block;
         margin: 0 auto;
         position: relative;
-        z-index: 2;
 
         a {
             display: block;

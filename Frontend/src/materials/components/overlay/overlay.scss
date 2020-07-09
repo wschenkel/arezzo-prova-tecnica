@@ -1,6 +1,10 @@
 @import 'base/colors';
+@import 'utils/medias';
 
 [data-component='overlay'] {
+    @include desktop() {
+        display: none;
+    }
     position: fixed;
     background: $black-lighter;
     width: 100%;

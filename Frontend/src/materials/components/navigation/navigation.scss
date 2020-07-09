@@ -1,4 +1,5 @@
 @import 'base/colors';
+@import 'base/fonts';
 @import 'utils/medias';
 
 [data-component='navigation'] {
@@ -81,7 +82,7 @@
                 margin-top: 0;
                 display: none;
             }
-            margin-top: 22px;
+            margin-top: 14px;
             
             a {
                 font-weight: normal;
@@ -92,15 +93,19 @@
     a {
         @include desktop() {
             padding: 0;
+            font-size: 13px;
         }
         text-decoration: none;
         display: flex; 
-        color: $black;
+        color: $grey-darker;
+        font-family: $primary-font;
         padding: 0 10px;
         align-items: center;
         height: 100%;
         transition: color .2s ease-in-out;
         font-weight: bold;
+        text-transform: uppercase;
+        font-size: 12px;
 
         &.active,
         &:hover {
