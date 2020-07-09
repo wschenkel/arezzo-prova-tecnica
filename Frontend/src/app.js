@@ -15,11 +15,15 @@ export default class App {
 			initialSlice: 0,
 			finalSlice: 24
 		}
-		
+
 		// Initialize ordenation by price.
 		this.orderProducts('highest', arrProducts);
 		this.createPagination(arrProducts);
 		
+		this.initializeEvents(arrProducts);
+	}
+
+	initializeEvents(arrProducts) {
 		// Select
 		const selOrder = document.getElementsByClassName('selOrderProducts')[0];
 		selOrder.addEventListener('change', () => {
@@ -135,7 +139,6 @@ export default class App {
 				break;
 			
 			case 'inordinate': // Z-A
-				console.log('A-Z');
 				this.orderByInordinate(products);
 				break;
 			default:

@@ -23,16 +23,24 @@
         height: 35px;
         cursor: pointer;
         
-        &.blocked {
-            background: $grey-blocked;
+        &.btn-previous-page {
+            background: url('/assets/img/arrow-previous.png') no-repeat center center;
+            
+            &.blocked {
+                background: url('/assets/img/arrow-blocked-previous.png') no-repeat center center $grey-blocked;
+            }
+        }
+
+        &.btn-next-page {
+            background: url('/assets/img/arrow-next.png') no-repeat center center;
+            
+            &.blocked {
+                background: url('/assets/img/arrow-blocked-next.png') no-repeat center center $grey-blocked;
+            }
         }
     }
 
-    .btn-previous-page {
-        img {
-            transform: rotate(-180deg);
-        }
-    }
+
 
     ul {
         @include desktop() {
