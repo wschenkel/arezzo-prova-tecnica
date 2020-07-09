@@ -200,6 +200,108 @@
           display: block;
           text-transform: uppercase; } }
 
+[data-component='overlay'] {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: block;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: all .35s ease-in-out;
+  transition: all .35s ease-in-out; }
+  @media (min-width: 992px) {
+    [data-component='overlay'] {
+      display: none; } }
+  [data-component='overlay'].show {
+    -webkit-transform: translateX(0);
+            transform: translateX(0); }
+
+[data-component='pagination'] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 50px;
+  margin-bottom: 60px; }
+  @media (min-width: 992px) {
+    [data-component='pagination'] {
+      margin-bottom: 29px;
+      padding-top: 45px; } }
+  [data-component='pagination'] button {
+    width: 35px;
+    height: 35px;
+    cursor: pointer; }
+    @media (min-width: 992px) {
+      [data-component='pagination'] button {
+        width: 40px;
+        height: 40px; } }
+    [data-component='pagination'] button.blocked {
+      background: #E2E2E2; }
+  [data-component='pagination'] .btn-previous-page img {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg); }
+  [data-component='pagination'] ul {
+    padding: 0;
+    margin: 0 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    @media (min-width: 992px) {
+      [data-component='pagination'] ul {
+        margin: 0 20px; } }
+  [data-component='pagination'] li {
+    list-style: none;
+    width: 35px;
+    height: 35px; }
+    @media (min-width: 992px) {
+      [data-component='pagination'] li {
+        margin-right: 20px;
+        width: 40px;
+        height: 40px; } }
+    @media (min-width: 992px) {
+      [data-component='pagination'] li:last-child {
+        margin-right: 0; } }
+  [data-component='pagination'] a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    text-align: center;
+    line-height: 35px;
+    color: #333;
+    font-family: "Fira Sans Condensed", sans-serif;
+    font-size: 12px;
+    -webkit-transition: color .2s ease-in-out;
+    transition: color .2s ease-in-out; }
+    @media (min-width: 992px) {
+      [data-component='pagination'] a {
+        line-height: 40px; } }
+    [data-component='pagination'] a:hover {
+      color: #92AA88; }
+    [data-component='pagination'] a.active {
+      background: #92AA88;
+      color: #fff; }
+
 [data-component='navigation'] {
   background: #fff;
   padding: 20px;
@@ -324,98 +426,3 @@
       [data-component='navigation'] .btn-close-collapse span:last-child {
         -webkit-transform: rotate(-45deg);
                 transform: rotate(-45deg); }
-
-[data-component='overlay'] {
-  position: fixed;
-  background: rgba(0, 0, 0, 0.5);
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  display: block;
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
-  -webkit-transition: all .35s ease-in-out;
-  transition: all .35s ease-in-out; }
-  @media (min-width: 992px) {
-    [data-component='overlay'] {
-      display: none; } }
-  [data-component='overlay'].show {
-    -webkit-transform: translateX(0);
-            transform: translateX(0); }
-
-[data-component='pagination'] {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding-top: 50px;
-  margin-bottom: 60px; }
-  @media (min-width: 992px) {
-    [data-component='pagination'] {
-      margin-bottom: 29px;
-      padding-top: 45px; } }
-  [data-component='pagination'] button {
-    width: 35px;
-    height: 35px; }
-    @media (min-width: 992px) {
-      [data-component='pagination'] button {
-        width: 40px;
-        height: 40px; } }
-    [data-component='pagination'] button.blocked {
-      background: #E2E2E2; }
-  [data-component='pagination'] .btn-previous-page img {
-    -webkit-transform: rotate(-180deg);
-            transform: rotate(-180deg); }
-  [data-component='pagination'] ul {
-    padding: 0;
-    margin: 0 5px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between; }
-    @media (min-width: 992px) {
-      [data-component='pagination'] ul {
-        margin: 0 20px; } }
-  [data-component='pagination'] li {
-    list-style: none;
-    width: 35px;
-    height: 35px; }
-    @media (min-width: 992px) {
-      [data-component='pagination'] li {
-        margin-right: 20px;
-        width: 40px;
-        height: 40px; } }
-    @media (min-width: 992px) {
-      [data-component='pagination'] li:last-child {
-        margin-right: 0; } }
-  [data-component='pagination'] a {
-    display: block;
-    width: 100%;
-    height: 100%;
-    text-decoration: none;
-    text-align: center;
-    line-height: 35px;
-    color: #333; }
-    @media (min-width: 992px) {
-      [data-component='pagination'] a {
-        line-height: 40px; } }
-    [data-component='pagination'] a.active {
-      background: #92AA88;
-      color: #fff; }
