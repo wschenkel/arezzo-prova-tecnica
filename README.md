@@ -3,12 +3,8 @@
 1. Instalar nodejs: https://nodejs.org/en/
 2. Instalar gulp global: npm install -g gulp-cli
 
-# Usar #
-1. Copiar o conteúdo da pasta para a pasta do projeto em questão.
-2. Abrir o Terminal dar cd até a raiz da pasta framework
-3. npm start
-
-Após insalar pela primeira vez, para rodar novamente, utilize o comando gulp.
-
-# Otimizar para Deploy #
-1. Utilizar o comando: gulp build
+# Como executar #
+1. Clone o projeto na sua máquina.
+2. Abrir o terminal e entrar até a pasta raiz do projeto (Frontend).
+3. Executar npm install para instalar as dependências.
+4. Após instalado, executar o comando <code>gulp</code> para rodar o projeto.
