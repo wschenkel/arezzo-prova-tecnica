@@ -168,7 +168,7 @@ export default class App {
 
 	getProducts() {
         const xhr = new XMLHttpRequest();
-		xhr.open('GET', `https://arezzo-frontend-test.netlify.app/api/products.json`, false);
+		xhr.open('GET', `http://${window.location.host}/api/products.json`, false);
 
 		try {
 			xhr.send();
